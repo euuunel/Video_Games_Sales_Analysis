@@ -13,7 +13,7 @@ The objective of this project is to simulate the perspective of an investor in 2
 - PS3 and X360 showed strong sales early (2008–2012) but declined after.
 - PS4 grew steadily from 2013, peaking around 2017.
 - PC maintained a lower but stable performance.
-![Yearly Sales Trend by Console](Assets/TOP10_PUBLISHER_BY_UNIT_SALES.png)
+![Yearly Sales Trend by Console](Assets/TREND_OF_UNITS_SALES.png)
 *Line chart showing the unit sales trend.*
 
 ### 2. 📦 **Total Unit Sales by Console**
