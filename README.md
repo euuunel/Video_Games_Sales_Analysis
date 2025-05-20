@@ -75,19 +75,22 @@ years = sorted(df['release_date'].dt.year.dropna().unique())
 years = [year for year in years if 2008 <= year <= 2018]                  #Only from year 2008 to 2018 will be included in dropdown.
 years_dropdown = ['All Years (2008-2018)'] + sorted(years, reverse=True)
 
-fig_title = go.Figure()
-fig_title.add_trace(go.Indicator(
-mode="number",
-title="Video Games Unit Sales (2008 to 2018)",
-title_font_size = 36,
-title_font_color = "white",
-domain={'x': [0, 1], 'y': [0, 0.5]}
+fig_title=go.Figure()
+fig_title.add_trace(go.Scatter(
+    x=[0],
+    y=[0],
+    text=["Video Games Unit Sales (2008 to 2018)"],
+    mode="text",
+    textfont=dict(size=24, color="white")
 ))
+
 fig_title.update_layout(
-    paper_bgcolor="black",  # Background color
+    paper_bgcolor="black",
     plot_bgcolor="black",
-    margin=dict(t=10, b=10, l=20, r=20)  # Adjust padding
+    xaxis_visible=False,
+    yaxis_visible=False
 )
+
 fig_title.show()
 
 # Widgets
@@ -261,10 +264,10 @@ def update_plot(_):
         fig_treemap2.show()
 
         
-# Button click listener
+
 update_button.on_click(update_plot)
 
-# Initial display
+
 display(year_dropdown, update_button, output)
 update_plot(None)  # Show initial chart for "All Years"
 ```
